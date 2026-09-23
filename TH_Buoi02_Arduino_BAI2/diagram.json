@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "NGUYEN HUYNH NGOC ANH",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 10.2, "left": 191.4, "attrs": {} },
+    { "type": "chip-ir-sensor", "id": "chip1", "top": 77.82, "left": -52.8, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 169.4,
+      "left": 57.6,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "chip1:VCC", "uno:5V", "red", [ "h-57.6", "v182.4", "h457" ] ],
+    [ "chip1:GND", "uno:GND.1", "black", [ "h-38.4", "v-115.2", "h393.3" ] ],
+    [ "chip1:OUT", "uno:8", "gold", [ "h30.61", "v-144", "h278" ] ],
+    [ "btn1:2.r", "uno:5V", "green", [ "v38.6", "h221", "v-38.3" ] ],
+    [ "btn1:2.l", "chip1:SIM_OBJ", "green", [ "h-38.4", "v-47.8", "h67.2", "v-67.2" ] ]
+  ],
+  "dependencies": {}
+}

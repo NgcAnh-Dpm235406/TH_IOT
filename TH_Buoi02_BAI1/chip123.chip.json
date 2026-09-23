@@ -1,0 +1,9 @@
+{
+  "name": "LM35-Sensor",
+  "pins": [
+    "VCC",
+    "VOUT",
+    "GND"
+  ],
+  "controls": []
+}

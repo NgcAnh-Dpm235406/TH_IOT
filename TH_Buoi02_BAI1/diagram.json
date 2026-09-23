@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "NGUYEN HUYNH NGOC ANH",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "chip-chip123", "id": "chip1", "top": 260.22, "left": -196.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "chip1:VCC", "uno:5V", "red", [ "v-28.8", "h355.2", "v-48.5" ] ],
+    [ "chip1:GND", "uno:GND.2", "black", [ "h-19.2", "v28.8", "h380.7" ] ],
+    [ "uno:3", "chip1:IN_T", "green", [ "v-18.6", "h109", "v336", "h-556.8", "v-38.4" ] ],
+    [ "uno:4", "chip1:IN_H", "green", [ "v-47.4", "h89.7", "v326.4" ] ],
+    [ "chip1:VOUT", "uno:A1", "green", [ "v57.6", "h409.5" ] ]
+  ],
+  "dependencies": {}
+}

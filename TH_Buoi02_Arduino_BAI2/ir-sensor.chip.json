@@ -1,0 +1,10 @@
+{
+  "name": "IR-Sensor",
+  "pins": [
+    "VCC",
+    "GND",
+    "OUT",
+    "SIM_OBJ"
+  ],
+  "controls": []
+}
