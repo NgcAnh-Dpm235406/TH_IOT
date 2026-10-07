@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "DUONG THI KIM ANH",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -48, "left": 62.44, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -41.8,
+      "left": -172.8,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 73.2,
+      "left": -149.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 176.75,
+      "left": -153.6,
+      "attrs": { "value": "220000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:32", "r1:1", "green", [ "h-239.85", "v144" ] ],
+    [ "r1:1", "led1:A", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "esp:2", "r1:1", "green", [ "h0" ] ],
+    [ "led1:C", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "esp:GND.1", "green", [ "h-9.6", "v-76.8" ] ],
+    [ "led1:A", "esp:2", "green", [ "v19.2", "h288" ] ],
+    [ "esp:4", "btn1:1.l", "green", [ "h-384", "v-124.8" ] ],
+    [ "btn1:1.r", "esp:GND.1", "green", [ "h38.6", "v115.2", "h134.25" ] ]
+  ],
+  "dependencies": {}
+}

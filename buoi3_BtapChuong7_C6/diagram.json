@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "NGUYEN THI NGAN HUE",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": 228.4,
+      "left": -115.2,
+      "attrs": { "hornColor": "red" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "servo1:V+", "red", [ "v125.3", "h-284.8", "v-28.9" ] ],
+    [ "servo1:GND", "uno:GND.2", "black", [ "v-38.4", "h284.7" ] ],
+    [ "servo1:PWM", "uno:9", "green", [ "h-19.2", "v-288.4" ] ]
+  ],
+  "dependencies": {}
+}

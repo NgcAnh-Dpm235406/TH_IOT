@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -96,
+      "left": -129.56,
+      "attrs": { "env": "micropython-20231005-v1.21.0" }
+    },
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 0, "left": 60, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -185.6,
+      "left": 168.8,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:5V", "bb1:bp.1", "red", [ "h-25", "v240", "h210" ] ],
+    [ "esp:GND.1", "bb1:bn.1", "black", [ "h140", "v210" ] ],
+    [ "lcd1:VCC", "bb1:bp.10", "red", [ "h28.8", "v330.4" ] ],
+    [ "lcd1:GND", "bb1:bn.10", "black", [ "h-38.4", "v349.9" ] ],
+    [ "lcd1:SDA", "esp:21", "green", [ "v40", "h-260" ] ],
+    [ "lcd1:SCL", "esp:22", "blue", [ "v86.7", "h-172.8", "v-9.6" ] ]
+  ],
+  "dependencies": {}
+}
